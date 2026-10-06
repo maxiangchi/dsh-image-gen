@@ -1,0 +1,88 @@
+{
+  "name": "dsh-image-gen",
+  "version": "1.0.0",
+  "description": "在 dsh 插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:支持 [OI] 兼容的 /images/generations 与 Google AI Studio (Gemini / Imagen)。Fill in an image endpoint and key in the dsh Plugins panel to give dsh the generate_image tool: [OI]-compatible /images/generations and Google AI Studio (Gemini / Imagen).",
+  "type": "module",
+  "main": "index.js",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "image-generation",
+    "text-to-image",
+    "tool",
+    "openai",
+    "gemini",
+    "imagen",
+    "google-ai-studio"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "name": "image-gen",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.1.0-rc.5"
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "绘图 (Image generation)",
+    "summary": "在插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:[OI] 兼容格式 + Google AI Studio。",
+    "categories": [
+      "工具",
+      "Web UI"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ],
+    "capabilities": {
+      "provides": [
+        "tool:generate_image"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.1.0-rc.5",
+      "node": ">=20"
+    },
+    "permissions": {
+      "network": [
+        "https://api.openai.com",
+        "https://generativelanguage.googleapis.com"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

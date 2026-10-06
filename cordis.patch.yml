@@ -1,0 +1,4 @@
+# dsh-image-gen mounts the drawing tool into the agent toolset.
+- insert:
+    - id: image-gen
+      name: dsh-image-gen

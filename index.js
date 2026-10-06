@@ -47,7 +47,7 @@ const PROTOCOL_NAME = {
 const SEED_GROUPS = [
     {
         id: 'openai',
-        name: '[OI]',
+        name: 'OpenAI',
         protocol: 'openai',
         quality: 'high',
         responseFormat: 'url',

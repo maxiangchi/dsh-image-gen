@@ -1,7 +1,7 @@
 {
   "name": "dsh-image-gen",
   "version": "1.0.0",
-  "description": "在 dsh 插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:支持 [OI] 兼容的 /images/generations 与 Google AI Studio (Gemini / Imagen)。Fill in an image endpoint and key in the dsh Plugins panel to give dsh the generate_image tool: [OI]-compatible /images/generations and Google AI Studio (Gemini / Imagen).",
+  "description": "在 dsh 插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:支持 OpenAI 兼容的 /images/generations 与 Google AI Studio (Gemini / Imagen)。Fill in an image endpoint and key in the dsh Plugins panel to give dsh the generate_image tool: OpenAI-compatible /images/generations and Google AI Studio (Gemini / Imagen).",
   "type": "module",
   "main": "index.js",
   "keywords": [
@@ -39,7 +39,7 @@
   "dshhub": {
     "schemaVersion": 1,
     "displayName": "绘图 (Image generation)",
-    "summary": "在插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:[OI] 兼容格式 + Google AI Studio。",
+    "summary": "在插件面板里填写绘图端点与密钥,给 dsh 增加 generate_image 绘图能力:OpenAI 兼容格式 + Google AI Studio。",
     "categories": [
       "工具",
       "Web UI"

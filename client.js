@@ -51,7 +51,7 @@ window.__ModuleLoader__.load({
             "field.outputDir": "另存目录",
             "field.outputDir.hint": "绝对路径；留空则图片只作为附件返回。",
             "field.protocol": "协议",
-            "field.protocol.openai": "[OI] 兼容",
+            "field.protocol.openai": "OpenAI 兼容",
             "field.protocol.google": "Google AI Studio",
             "group.auto": "自动（第一个有密钥的分组）",
             "group.name": "分组名",
@@ -71,7 +71,7 @@ window.__ModuleLoader__.load({
             "model.default": "默认",
             "model.none": "还没有模型，加一个才能出图。",
             "preset.label": "快速填入",
-            "preset.openai": "[OI]",
+            "preset.openai": "OpenAI",
             "preset.gemini": "Gemini 出图",
             "preset.imagen": "Imagen",
             "action.save": "保存",
@@ -110,7 +110,7 @@ window.__ModuleLoader__.load({
             "field.outputDir": "Save-into directory",
             "field.outputDir.hint": "An absolute path; leave empty to return attachments only.",
             "field.protocol": "Protocol",
-            "field.protocol.openai": "[OI]-compatible",
+            "field.protocol.openai": "OpenAI-compatible",
             "field.protocol.google": "Google AI Studio",
             "group.auto": "Automatic (first group with a key)",
             "group.name": "Group name",
@@ -130,7 +130,7 @@ window.__ModuleLoader__.load({
             "model.default": "Default",
             "model.none": "No models yet — add one before it can draw.",
             "preset.label": "Quick fill",
-            "preset.openai": "[OI]",
+            "preset.openai": "OpenAI",
             "preset.gemini": "Gemini image",
             "preset.imagen": "Imagen",
             "action.save": "Save",
@@ -206,7 +206,7 @@ window.__ModuleLoader__.load({
          */
         const SEED_GROUPS = [
             {
-                id: "openai", name: "[OI]", protocol: "openai", ...PROTOCOL_DEFAULTS.openai,
+                id: "openai", name: "OpenAI", protocol: "openai", ...PROTOCOL_DEFAULTS.openai,
                 models: [modelOf("gpt-image-1"), modelOf("dall-e-3")], defaultModel: "gpt-image-1",
             },
             {
@@ -491,7 +491,7 @@ window.__ModuleLoader__.load({
              * Switch one group's protocol, moving its untouched defaults along.
              *
              * A leftover endpoint from the other protocol would send Google's key
-             * to [OI] or the reverse, which fails in a way that is hard to read off
+             * to OpenAI or the reverse, which fails in a way that is hard to read off
              * the error, so a field still holding either protocol's default follows
              * the chip. A value the user typed is kept.
              */
